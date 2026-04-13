@@ -3,12 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dreamnity | UGC Reel Campaign Scripts</title>
+<title>Dreamnity | Campaign Pre-Production Assets</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<!-- Chosen Palette: Slate/Neutral base with Sky Blue, Violet, and Emerald accents for a clean, modern SaaS/Agency presentation vibe. -->
-<!-- Application Structure Plan: A two-column interactive layout (on desktop) to present the 6 scripts. The left column acts as a sticky navigation menu for the reels, while the right column dynamically loads the selected script's details (Vibe, Setup, and Timestamped Script). This prevents "scroll fatigue" for the client and makes reviewing the scripts highly organized and professional. -->
-<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+<!-- Application Structure Plan: A two-column interactive portal designed specifically for client presentation. The left column provides sticky navigation for the 6 reel concepts. The right column dynamically injects the detailed 60-second scripts. -->
 <style>
     body {
         font-family: 'Inter', sans-serif;
@@ -19,7 +17,7 @@
         font-family: 'Outfit', sans-serif;
     }
     .text-gradient {
-        background: linear-gradient(to right, #0ea5e9, #8b5cf6);
+        background: linear-gradient(to right, #0ea5e9, #8b5cf6, #ec4899);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -27,9 +25,10 @@
         transition: all 0.2s ease-in-out;
     }
     .reel-btn.active {
-        background-color: #eff6ff;
-        border-left: 4px solid #3b82f6;
-        color: #1e3a8a;
+        background-color: #ffffff;
+        border-left: 4px solid #8b5cf6;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        color: #4c1d95;
     }
     .reel-btn.inactive {
         background-color: transparent;
@@ -41,313 +40,325 @@
         color: #0f172a;
     }
     .script-block {
-        animation: fadeIn 0.3s ease-in-out;
+        animation: fadeIn 0.4s ease-out;
     }
     @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(5px); }
+        from { opacity: 0; transform: translateY(10px); }
         to { opacity: 1; transform: translateY(0); }
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #cbd5e1;
+        border-radius: 10px;
     }
 </style>
 </head>
-<body class="antialiased pb-24">
+<body class="antialiased pb-24 selection:bg-violet-200 selection:text-violet-900">
 
-<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
-    <!-- Header -->
-    <header class="mb-12 text-center md:text-left border-b border-slate-200 pb-8">
-        <div class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 font-semibold text-xs uppercase tracking-wider mb-4">
-            Pre-Production Scripts
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+    
+    <header class="mb-12 border-b border-slate-200 pb-8 text-center md:text-left relative">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-violet-400/10 rounded-full blur-3xl -z-10"></div>
+        <div class="inline-block px-4 py-1.5 rounded-full bg-slate-100 text-slate-700 font-bold text-xs uppercase tracking-wider mb-4 border border-slate-200">
+            Pre-Production Document: Phase 1
         </div>
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-slate-900">
-            <span class="text-gradient">Dreamnity</span> Organic Content Campaign
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight text-slate-900">
+            <span class="text-gradient">Dreamnity</span> Content Assets
         </h1>
         <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">
-            Please review the 6 targeted UGC (User Generated Content) scripts designed for Instagram Reels & YouTube Shorts. 
-            These are optimized for high organic reach, focusing on freelancer pain points and the Dreamnity solution.
+            Extended, story-driven 60-second scripts. These scripts utilize strong vocal hooks, relatable narrative arcs, and natural pacing to retain viewers on Instagram Reels and YouTube Shorts, optimizing for organic acquisition.
         </p>
     </header>
 
-    <!-- Production Overview -->
     <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8 mb-10">
         <h2 class="text-2xl font-bold font-heading text-slate-800 mb-4 flex items-center">
-            <span class="mr-2 text-2xl">🎬</span> Production Setup
+            Production Guidelines & Setup
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div>
-                <strong class="text-slate-800 block mb-1">A-Roll (The Cast)</strong>
-                <p class="text-sm text-slate-600">Cast sits casually on a sofa, leaning slightly forward. Speaking naturally but with high energy directly to the camera (shot vertically on a smartphone).</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                <strong class="text-slate-800 block mb-2 font-heading text-lg">Tone & Delivery</strong>
+                <p class="text-sm text-slate-600 leading-relaxed">Actors will use a conversational, direct-to-camera approach. The delivery should feel native to the platform—using natural pauses and gestures rather than formal, broadcast-style reading.</p>
             </div>
-            <div>
-                <strong class="text-slate-800 block mb-1">B-Roll (Visuals)</strong>
-                <p class="text-sm text-slate-600">Screen recordings of the Dreamnity app, zoomed-in text overlays, or tight close-ups on props (like a coffee mug or a ₹500 note) to break up the visual pacing.</p>
+            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                <strong class="text-slate-800 block mb-2 font-heading text-lg">Retention Tactics</strong>
+                <p class="text-sm text-slate-600 leading-relaxed">The initial 3 seconds contain pattern interrupts to halt scrolling. The scripts immediately address primary pain points (GST, FX fees, delays) before introducing the platform solution.</p>
             </div>
-            <div>
-                <strong class="text-slate-800 block mb-1">Target Runtime</strong>
-                <p class="text-sm text-slate-600">Strictly ~30 seconds each. Scripts are precisely 60-75 words to ensure fast pacing and high retention rates.</p>
+            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                <strong class="text-slate-800 block mb-2 font-heading text-lg">Visual Strategy</strong>
+                <p class="text-sm text-slate-600 leading-relaxed">To maintain engagement over a 60-second duration, the primary A-Roll (actor on camera) is broken up every 10-15 seconds with secondary B-Roll (screen recordings, UI elements, text overlays).</p>
             </div>
         </div>
     </div>
 
-    <!-- Interactive Script Viewer -->
     <div class="flex flex-col md:flex-row gap-8 items-start">
         
-        <!-- Sidebar Navigation -->
-        <div class="w-full md:w-1/3 flex flex-col gap-2 sticky top-6" id="reel-nav">
-            <!-- Buttons injected by JS -->
+        <div class="w-full md:w-1/3 flex flex-col gap-2 sticky top-6 custom-scrollbar max-h-[80vh] overflow-y-auto" id="reel-nav">
+            <!-- Navigation injected via JS -->
         </div>
 
-        <!-- Content Area -->
-        <div class="w-full md:w-2/3 bg-white rounded-2xl shadow-lg border border-slate-200 p-6 md:p-10 min-h-[500px]" id="script-content">
-            <!-- Content injected by JS -->
+        <div class="w-full md:w-2/3 bg-white rounded-2xl shadow-xl border border-slate-200 p-6 md:p-10 min-h-[600px] relative overflow-hidden" id="script-content">
+             <!-- Script Content injected via JS -->
         </div>
 
     </div>
 </div>
 
 <script>
-    // Data Structure for the 6 Reels
     const reelsData = [
         {
             id: 1,
-            title: "Reel 1: The CA Trap",
-            target: "Targeting GST Pain",
-            vibe: "Frustrated but revealing a 'secret hack.'",
-            setup: "Actor sitting on the sofa, holding a printed invoice or looking at a laptop.",
+            title: "Reel 1: The CA Confession",
+            target: "Compliance Anxiety & Operational Costs",
+            vibe: "Relieved, slightly exasperated at past inefficiencies. Candid and authoritative.",
+            setup: "Actor sits on the edge of a sofa, holding a thick stack of papers (mock tax files), dropping them on a table.",
             blocks: [
                 {
-                    time: "0:00 - 0:03",
-                    type: "Hook (A-Roll on Sofa)",
-                    text: "Stop paying your CA for this! 🛑",
-                    audio: "If you are an Indian freelancer paying your CA ₹2,000 every month just to file GST for international clients... stop.",
-                    visual: ""
+                    time: "0:00 - 0:05",
+                    type: "The Hook (A-Roll)",
+                    text: "I fired my CA... and saved ₹25,000.",
+                    audio: "I just fired my CA of three years... and it honestly saved me twenty-five thousand rupees and a massive headache.",
+                    visual: "Actor drops the stack of papers. Fast zoom into the subject's face."
                 },
                 {
-                    time: "0:03 - 0:12",
-                    type: "The Agitation (B-Roll)",
+                    time: "0:05 - 0:25",
+                    type: "The Agitation (A-Roll + B-Roll)",
                     text: "",
-                    audio: "You are wasting your hard-earned money on compliance you shouldn't even be doing manually.",
-                    visual: "Cut to B-roll of a messy WhatsApp chat with a CA asking for 'LUT, FIRC, and Invoices.'"
+                    audio: "Look, if you do freelance work for US or UK clients, you know the drill. You get paid, and immediately the anxiety starts. You need an LUT, a FIRC from the bank, you have to file GST 3B... I'm a graphic designer, why am I doing international tax law at 11 PM? It got to the point where I was rejecting foreign clients because the paperwork wasn't worth the money.",
+                    visual: "B-Roll: Screen recording of a messy messaging thread requesting compliance documents. Quick flash of a complex tax portal."
                 },
                 {
-                    time: "0:12 - 0:25",
-                    type: "The Solution (A-Roll on Sofa)",
-                    text: "",
-                    audio: "Use Dreamnity instead. They act as your Merchant of Record. That means *they* generate the invoice, and *they* handle the GST compliance automatically. You literally don't need to file anything.",
-                    visual: "Cut back to actor on sofa, leaning in like it's a secret."
+                    time: "0:25 - 0:45",
+                    type: "The Solution (A-Roll)",
+                    text: "Merchant of Record = Automated Compliance",
+                    audio: "Then I found out about a legal structure called a Merchant of Record. I use this platform called Dreamnity. Instead of me billing the client directly, Dreamnity invoices them. Dreamnity legally acts as the seller, which means they handle the GST compliance. They handle the filings.",
+                    visual: "Actor leans back, projecting relaxation. On-screen text highlights 'Merchant of Record'."
                 },
                 {
-                    time: "0:25 - 0:30",
-                    type: "CTA (Text & Voice)",
-                    text: "Link in Bio to skip the paperwork.",
-                    audio: "Focus on your work, not the paperwork. Link in bio to try it.",
-                    visual: ""
+                    time: "0:45 - 1:00",
+                    type: "The Call to Action (A-Roll)",
+                    text: "Stop the paperwork. Link in bio.",
+                    audio: "I don't need a GST number anymore. The client pays them, they pay me directly to my Indian bank account in pure INR. It is literally that simple. If you want to just do your work and skip the paperwork, check out Dreamnity in my bio.",
+                    visual: "Actor picks up a coffee mug, takes a sip, and points toward the bio link."
                 }
             ]
         },
         {
             id: 2,
-            title: "Reel 2: Payment Breakdown",
-            target: "Beginner Educational",
-            vibe: "Educational, 'pulling back the curtain' on how the finance industry works.",
-            setup: "Actor sitting on the sofa holding an iPad or a notepad, explaining simply.",
+            title: "Reel 2: The Gateway Margins",
+            target: "Hidden FX Fees & Revenue Leakage",
+            vibe: "Educational, revealing industry secrets. High energy.",
+            setup: "Actor standing by a window or sitting down, holding a smartphone, looking directly at the lens.",
             blocks: [
                 {
-                    time: "0:00 - 0:04",
-                    type: "Hook (A-Roll on Sofa)",
-                    text: "How international payments ACTUALLY work. 💸",
-                    audio: "Ever wonder what exactly happens when a US client pays you $500?",
-                    visual: ""
+                    time: "0:00 - 0:06",
+                    type: "The Hook (A-Roll)",
+                    text: "Your payment gateway is stealing from you.",
+                    audio: "I am going to prove to you right now that your payment gateway is stealing from you, and you are actively thanking them for it.",
+                    visual: "Direct point at the camera to break the fourth wall."
                 },
                 {
-                    time: "0:04 - 0:14",
-                    type: "The Education (B-Roll)",
+                    time: "0:06 - 0:30",
+                    type: "The Breakdown (B-Roll Heavy)",
                     text: "",
-                    audio: "First, traditional payment gateways take a 4% cut just to process it. Then, your Indian bank gives you a terrible exchange rate. Before you even touch it, you've lost thousands of rupees.",
-                    visual: "Simple graphic pops up over the video: $500 ➔ Gateway (-4%) ➔ Bank (-₹2/USD) ➔ You."
+                    audio: "Let's do the math. Your international client sends you $1,000. You check the market rate, you think, 'Great, 83,000 rupees.' Wrong. First, the platform takes their standard 3 to 4 percent fee. So now you're at $960. But here is the mechanism they use against you: The FX Spread. Instead of the real exchange rate, they give you a custom rate that is much lower. You just lost another two thousand rupees.",
+                    visual: "Visual graphic sequence: $1000 -> Platform Fee (-4%) -> Altered FX Rate -> Total Loss ₹5000+. Numbers decrement visually."
                 },
                 {
-                    time: "0:14 - 0:24",
-                    type: "The Solution (A-Roll on Sofa)",
-                    text: "0% FX charges.",
-                    audio: "This is why smart freelancers use Dreamnity. They act as your Merchant of Record and partner with platforms like Briskpe to give you ZERO percent FX charges.",
-                    visual: "Actor smiles, putting the notepad down. Text pops up."
+                    time: "0:30 - 0:50",
+                    type: "The Solution (A-Roll)",
+                    text: "0% FX Markups with Dreamnity",
+                    audio: "On a single project, you lost five thousand rupees for absolutely no reason. This is exactly why I shifted my operations to Dreamnity. They partnered with Briskpe to provide zero percent FX markups. Zero. You receive the exact, real-time exchange rate.",
+                    visual: "Actor shakes head, then smiles. Text overlay: '0% FX Markups'."
                 },
                 {
-                    time: "0:24 - 0:30",
-                    type: "CTA (Text & Voice)",
-                    text: "Stop losing money. Link in bio.",
-                    audio: "You get the real exchange rate, right into your account. Link in bio to stop losing money.",
-                    visual: ""
+                    time: "0:50 - 1:00",
+                    type: "The Call to Action (A-Roll)",
+                    text: "Keep your margins. Link in bio.",
+                    audio: "Stop letting legacy platforms skim your margins. Go to the link in my bio, set up Dreamnity, and keep the money you actually earned.",
+                    visual: "Actor holds up phone displaying the Dreamnity interface."
                 }
             ]
         },
         {
             id: 3,
-            title: "Reel 3: The Waiting Game",
-            target: "Targeting Delayed Settlements",
-            vibe: "Anxious, relatable pain.",
-            setup: "Actor on sofa, aggressively refreshing an app on their phone, looking stressed.",
+            title: "Reel 3: The Delayed Settlement",
+            target: "Cash Flow Issues & Bank Holds",
+            vibe: "Highly relatable narrative. Starts tense, resolves into confidence.",
+            setup: "Actor sitting on the sofa, scrolling anxiously on a laptop or smartphone.",
             blocks: [
                 {
-                    time: "0:00 - 0:04",
-                    type: "Hook (A-Roll on Sofa)",
-                    text: "\"I sent the payment last week...\" 💀",
-                    audio: "There is nothing scarier than a foreign client saying 'I sent the money!'... but your Indian bank account says ZERO.",
-                    visual: ""
+                    time: "0:00 - 0:06",
+                    type: "The Hook (A-Roll)",
+                    text: "The worst text from a client.",
+                    audio: "There is no worse message a freelancer can receive than a client saying: 'I sent the wire last week, did it arrive?'",
+                    visual: "Actor looks up from the device, displaying stress."
                 },
                 {
-                    time: "0:04 - 0:14",
-                    type: "The Agitation (B-Roll)",
+                    time: "0:06 - 0:35",
+                    type: "The Narrative (A-Roll + B-Roll)",
                     text: "",
-                    audio: "Your money gets stuck for a week in international transit, your bank asks for purpose codes, and you're just sitting there stressing.",
-                    visual: "B-roll typing an email: 'Hi, checking on the invoice...' or a screenshot of an email saying 'Funds on Hold.'"
+                    audio: "Because you check your bank account, and the balance is zero. So you contact the bank. You wait on hold. Finally, a representative says the funds are stuck pending a purpose code and an invoice declaration. You fill out a form. Three more days pass. Your expenses are due. Your money is floating in international transit, and it looks highly unprofessional having to go back to the client and ask if they are sure the transfer went through.",
+                    visual: "B-Roll: Typing on a laptop. Screenshot of a banking email stating 'Funds on hold pending regulatory compliance'."
                 },
                 {
-                    time: "0:14 - 0:25",
-                    type: "The Solution (A-Roll on Sofa)",
-                    text: "",
-                    audio: "With Dreamnity, settlements are automated and lightning fast. Because they handle the compliance upfront, your money doesn't get blocked by banks. It just hits your account.",
-                    visual: "Actor smiles, puts the phone down."
+                    time: "0:35 - 0:50",
+                    type: "The Solution (A-Roll)",
+                    text: "Pre-Cleared Compliance = Fast Payouts",
+                    audio: "I refuse to operate that way anymore. I only use Dreamnity. Because Dreamnity operates as a Merchant of Record, they handle the necessary compliance before the capital even hits the domestic banking system. The bank already has the documentation they need.",
+                    visual: "Actor closes laptop, visibly relaxing."
                 },
                 {
-                    time: "0:25 - 0:30",
-                    type: "CTA (Text & Voice)",
-                    text: "Get paid faster. Link in bio.",
-                    audio: "Get your money when you actually need it. Link in bio.",
-                    visual: ""
+                    time: "0:50 - 1:00",
+                    type: "The Call to Action (A-Roll)",
+                    text: "Get paid on time. Link in bio.",
+                    audio: "The payment doesn't get flagged, it doesn't get delayed, it just clears directly into the account. If you need reliable cash flow, the link is in my bio.",
+                    visual: "Actor gestures toward the description."
                 }
             ]
         },
         {
             id: 4,
-            title: "Reel 4: The Reverse Gateway",
-            target: "Targeting Creators Fund",
-            vibe: "Excitement, disbelief.",
-            setup: "Actor on sofa. Starts with a tight close-up on a ₹500 note in their hand, then pans back to the actor's face.",
+            title: "Reel 4: The Incentive Model",
+            target: "User Acquisition via Creators Fund",
+            vibe: "Energetic, presenting a disruptive industry shift.",
+            setup: "Actor holding a crisp ₹500 note up to the camera lens.",
             blocks: [
                 {
-                    time: "0:00 - 0:04",
-                    type: "Hook (Close-Up)",
-                    text: "What if your payment gateway paid YOU? 🤯",
-                    audio: "Every payment gateway in the world charges YOU to receive YOUR money. What if they paid you instead?",
-                    visual: ""
+                    time: "0:00 - 0:06",
+                    type: "The Hook (Close Up)",
+                    text: "A gateway that pays you?",
+                    audio: "What if I told you there is a payment infrastructure that actually pays you a bonus just to process your transactions?",
+                    visual: "Actor pulls the currency note away to reveal their face."
                 },
                 {
-                    time: "0:04 - 0:12",
-                    type: "The Agitation (B-Roll)",
+                    time: "0:06 - 0:25",
+                    type: "The Setup (A-Roll)",
                     text: "",
-                    audio: "It sounds fake, but traditional fintechs treat freelancers like a cost center. They just take their cut.",
-                    visual: "Quick flashes of different brand logos (PayPal, Stripe, etc.) with a red minus sign next to them."
+                    audio: "Think about the current ecosystem. Every major fintech app—PayPal, Stripe, traditional gateways—they view freelancers as a revenue source. You secure the client, you deliver the assets, and then the gateway takes a 5 percent margin at the finish line. It is essentially a tax on your labor.",
+                    visual: "Actor counting off points on fingers."
                 },
                 {
-                    time: "0:12 - 0:25",
-                    type: "The Solution (A-Roll on Sofa)",
-                    text: "",
-                    audio: "Dreamnity actually pays its users. They have a 'Creators Fund', just like YouTube. Every time you process a payment, you get a bonus reward on top of your earnings.",
-                    visual: "Cut back to actor. B-roll pops up next to them showing a 'Bonus Payout' notification from Dreamnity."
+                    time: "0:25 - 0:50",
+                    type: "The Reveal (B-Roll Heavy)",
+                    text: "The Dreamnity Creators Fund",
+                    audio: "Dreamnity evaluated that system and built an entirely new model called the Creators Fund. It functions similarly to platform monetization. Every time a client pays you through their system, Dreamnity issues a bonus out of their own reserves. It is a reverse payment gateway. They actively reward you for driving volume to their infrastructure.",
+                    visual: "B-Roll: Screen recording of the Dreamnity dashboard. UI animation showing a payment clearing, followed by a '+ Bonus' notification."
                 },
                 {
-                    time: "0:25 - 0:30",
-                    type: "CTA (Text & Voice)",
-                    text: "Start earning bonuses. Link in bio.",
-                    audio: "Stop paying to get paid. Join Dreamnity from the link in my bio.",
-                    visual: ""
+                    time: "0:50 - 1:00",
+                    type: "The Call to Action (A-Roll)",
+                    text: "Stop paying to get paid.",
+                    audio: "I am done paying fees to access my own revenue. Join the Creators fund via the link in my bio.",
+                    visual: "Actor nods confidently to the camera."
                 }
             ]
         },
         {
             id: 5,
-            title: "Reel 5: The \"Hack\" Showcase",
-            target: "Targeting Product UI/UX",
-            vibe: "Casual tutorial, insider secret.",
-            setup: "Actor sitting on sofa, laptop on their lap, pointing at the screen.",
+            title: "Reel 5: Workflow Demonstration",
+            target: "Platform UI & User Experience",
+            vibe: "Practical, step-by-step product walkthrough.",
+            setup: "Actor sitting with a laptop, screen angled slightly away from the camera, maintaining eye contact.",
             blocks: [
                 {
-                    time: "0:00 - 0:05",
-                    type: "Hook (A-Roll on Sofa)",
-                    text: "POV: You found a legal cheat code for freelancers. 🤫",
-                    audio: "Watch how I send an international invoice in exactly 30 seconds without worrying about GST.",
-                    visual: ""
+                    time: "0:00 - 0:07",
+                    type: "The Hook (A-Roll)",
+                    text: "The compliance bypass workflow.",
+                    audio: "Here is the exact workflow I use to completely bypass filing GST documentation when contracting with international clients.",
+                    visual: "Actor leans in, speaking in a direct, instructional tone."
                 },
                 {
-                    time: "0:05 - 0:22",
-                    type: "The Showcase (B-Roll)",
+                    time: "0:07 - 0:30",
+                    type: "The Context (A-Roll)",
                     text: "",
-                    audio: "I log into Dreamnity. I enter the amount. And I hit send. That's it. Dreamnity acts as the Merchant of Record, so THEY generate the compliant invoice for my client. I don't need to file anything.",
-                    visual: "Clean, zoomed-in screen recording of the Dreamnity dashboard. Cursor clicks 'Create Invoice,' enters amount, and hits send."
+                    audio: "Standard procedure: if you bill an entity in London directly, domestic law classifies it as exporting services. You are required to maintain a GST registration, a Letter of Undertaking, and file monthly zero-returns or face regulatory penalties. It is a massive operational drain for independent contractors. Here is the alternative.",
+                    visual: "Actor turns the laptop screen toward the camera."
                 },
                 {
-                    time: "0:22 - 0:30",
-                    type: "CTA (A-Roll on Sofa)",
-                    text: "",
-                    audio: "One platform. Zero FX fees. Complete tax automation. Check out the link in my bio to set up your account.",
-                    visual: "Actor closes laptop, looks at camera."
+                    time: "0:30 - 0:50",
+                    type: "The Walkthrough (B-Roll)",
+                    text: "Three steps to settlement.",
+                    audio: "I do not bill the client directly. I open Dreamnity. I select Create Invoice, input the project value, and dispatch it. Because Dreamnity acts as the Merchant of Record, they generate a fully compliant invoice. The client settles with Dreamnity, and Dreamnity routes the funds to me in Indian Rupees.",
+                    visual: "High-fidelity screen recording demonstrating the invoice creation UI. Fast, seamless action."
+                },
+                {
+                    time: "0:50 - 1:00",
+                    type: "The Call to Action (A-Roll)",
+                    text: "Automate your compliance.",
+                    audio: "Zero monthly filings. Zero compliance overhead. If you want to streamline your operations, set up an account via the link in my profile.",
+                    visual: "Actor closes the laptop."
                 }
             ]
         },
         {
             id: 6,
-            title: "Reel 6: The Int. Robbery",
-            target: "Aggressive FX Targeting",
-            vibe: "Mind-blown, urgent.",
-            setup: "Actor on sofa, holding a coffee mug, casually chatting to the camera.",
+            title: "Reel 6: The Trust Deficit",
+            target: "Enterprise Perception & Professionalism",
+            vibe: "Reflective, sharing a critical business lesson.",
+            setup: "Actor sitting casually in a well-lit office or professional environment.",
             blocks: [
                 {
-                    time: "0:00 - 0:03",
-                    type: "Hook (A-Roll on Sofa)",
-                    text: "Where did your $100 go? 💸",
-                    audio: "Your US client just paid you $1,000... but why did you only receive ₹79,000 in your bank account?",
-                    visual: ""
+                    time: "0:00 - 0:08",
+                    type: "The Hook (A-Roll)",
+                    text: "I lost a $2,000 contract over a link.",
+                    audio: "I lost a two thousand dollar contract last quarter, purely because the client felt my payment link looked unprofessional.",
+                    visual: "Actor shakes head, indicating a past mistake."
                 },
                 {
-                    time: "0:03 - 0:15",
-                    type: "The Agitation (B-Roll)",
+                    time: "0:08 - 0:30",
+                    type: "The Narrative (A-Roll)",
                     text: "",
-                    audio: "Because traditional gateways are secretly hitting you with a 3-4% platform fee AND a terrible exchange rate. You're losing thousands per project.",
-                    visual: "Screen record of a standard currency converter showing ₹83, then crossing it out and showing a PayPal 4% fee deduction."
+                    audio: "When you start pitching enterprise clients or international agencies, you cannot rely on informal wire instructions or personal payment links. Corporate accounts payable departments flag those transactions. They require structured invoices and secure checkout portals that integrate with corporate cards. If your billing process looks amateur, they will find another vendor.",
+                    visual: "Text overlay: 'Corporate Accounts Payable Standards'."
                 },
                 {
-                    time: "0:15 - 0:25",
-                    type: "The Solution (A-Roll on Sofa)",
-                    text: "0% FX Markups",
-                    audio: "I switched to Dreamnity. Because of their partnership with Briskpe, they offer ZERO percent FX charges. You get exactly what you earned, directly in INR.",
-                    visual: "Actor looks happy/relieved. Text pops up."
+                    time: "0:30 - 0:50",
+                    type: "The Solution (B-Roll)",
+                    text: "Enterprise-grade checkout infrastructure.",
+                    audio: "That is why I migrated to Dreamnity. When a milestone is reached, Dreamnity generates a highly professional, enterprise-grade invoice. The client is directed to a secure checkout environment where they can process the payment via card or local transfer. It elevates my entire brand presentation.",
+                    visual: "B-Roll: Displaying the clean, client-facing checkout portal provided by Dreamnity."
                 },
                 {
-                    time: "0:25 - 0:30",
-                    type: "CTA (Text & Voice)",
-                    text: "Stop losing money. Link in bio.",
-                    audio: "Stop letting gateways steal your margins. Check out Dreamnity today.",
-                    visual: ""
+                    time: "0:50 - 1:00",
+                    type: "The Call to Action (A-Roll)",
+                    text: "Upgrade your billing. Link in bio.",
+                    audio: "Ensure your billing infrastructure matches the quality of your work. Upgrade to Dreamnity using the link in my bio.",
+                    visual: "Actor addresses the camera directly."
                 }
             ]
         }
     ];
 
-    // Initialize Application
     document.addEventListener('DOMContentLoaded', () => {
         renderNavigation();
-        selectReel(1); // Load the first reel by default
+        selectReel(1); 
     });
 
-    // Render Sidebar Navigation
     function renderNavigation() {
         const navContainer = document.getElementById('reel-nav');
-        reelsData.forEach(reel => {
+        reelsData.forEach((reel, index) => {
             const btn = document.createElement('button');
             btn.id = `nav-btn-${reel.id}`;
-            btn.className = `reel-btn inactive w-full text-left px-5 py-4 rounded-r-lg mb-1 flex flex-col`;
+            btn.className = `reel-btn inactive w-full text-left px-5 py-4 rounded-lg mb-2 flex flex-col`;
             btn.onclick = () => selectReel(reel.id);
             btn.innerHTML = `
-                <span class="font-heading font-bold text-lg leading-tight mb-1">${reel.title}</span>
-                <span class="text-xs font-medium uppercase tracking-wider opacity-70">${reel.target}</span>
+                <div class="flex items-center justify-between w-full mb-1">
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Concept 0${index + 1}</span>
+                    <span class="text-xs bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full font-medium">60s</span>
+                </div>
+                <span class="font-heading font-bold text-lg leading-tight mb-1 text-slate-800">${reel.title}</span>
+                <span class="text-xs font-medium text-slate-500 line-clamp-1">${reel.target}</span>
             `;
             navContainer.appendChild(btn);
         });
     }
 
-    // Handle Reel Selection & Content Rendering
     function selectReel(id) {
-        // Update active states on buttons
         reelsData.forEach(r => {
             const btn = document.getElementById(`nav-btn-${r.id}`);
             if (r.id === id) {
@@ -359,30 +370,37 @@
             }
         });
 
-        // Find selected data
         const reel = reelsData.find(r => r.id === id);
         if (!reel) return;
 
-        // Build Content HTML
         const contentContainer = document.getElementById('script-content');
         
         let blocksHTML = '';
         reel.blocks.forEach(block => {
             
-            let textOverlayHTML = block.text ? `<div class="mb-2"><span class="inline-block bg-slate-100 text-slate-800 text-xs font-bold px-2 py-1 rounded">Text on screen:</span> <span class="font-medium text-slate-700 ml-1">"${block.text}"</span></div>` : '';
-            let visualHTML = block.visual ? `<div class="mb-2"><span class="inline-block bg-violet-100 text-violet-800 text-xs font-bold px-2 py-1 rounded">Visual Action:</span> <span class="text-sm text-slate-600 ml-1">${block.visual}</span></div>` : '';
+            let textOverlayHTML = block.text ? `<div class="mb-3"><span class="inline-block bg-sky-100 text-sky-800 text-xs font-bold px-2 py-1 rounded shadow-sm">Text Overlay:</span> <span class="font-semibold text-slate-700 ml-2">"${block.text}"</span></div>` : '';
+            let visualHTML = block.visual ? `<div class="mb-3"><span class="inline-block bg-slate-100 text-slate-700 text-xs font-bold px-2 py-1 rounded shadow-sm">Visual / Direction:</span> <span class="text-sm text-slate-600 ml-2">${block.visual}</span></div>` : '';
             
             blocksHTML += `
-                <div class="mb-6 pl-4 border-l-4 border-slate-200">
-                    <div class="flex items-center gap-3 mb-2">
-                        <span class="bg-slate-800 text-white text-xs font-bold px-2 py-1 rounded-md">${block.time}</span>
-                        <span class="font-heading font-semibold text-slate-700">${block.type}</span>
+                <div class="mb-8 relative pl-6">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-0 top-2 bottom-[-2rem] w-0.5 bg-slate-200"></div>
+                    <!-- Timeline Dot -->
+                    <div class="absolute left-[-5px] top-2 w-3 h-3 rounded-full bg-violet-500 shadow-[0_0_8px_rgba(139,92,246,0.5)]"></div>
+
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="bg-slate-800 text-white text-xs font-bold px-2 py-1 rounded-md shadow-sm">${block.time}</span>
+                        <span class="font-heading font-bold text-slate-800 text-lg">${block.type}</span>
                     </div>
+                    
                     ${textOverlayHTML}
                     ${visualHTML}
-                    <div class="mt-2 bg-blue-50/50 p-4 rounded-lg border border-blue-100">
-                        <span class="inline-block text-blue-800 text-xs font-bold uppercase mb-1">Audio / Dialogue:</span>
-                        <p class="text-slate-800 font-medium italic">"${block.audio}"</p>
+                    
+                    <div class="mt-3 bg-slate-50 p-5 rounded-xl border border-slate-200 relative">
+                        <span class="block text-slate-400 text-xs font-bold uppercase mb-2 tracking-wider">Dialogue:</span>
+                        <p class="text-slate-800 font-medium text-[15px] leading-relaxed">
+                            "${block.audio}"
+                        </p>
                     </div>
                 </div>
             `;
@@ -390,24 +408,28 @@
 
         const fullHTML = `
             <div class="script-block" id="block-${reel.id}">
-                <div class="border-b border-slate-200 pb-5 mb-6">
-                    <h2 class="text-3xl font-extrabold font-heading text-slate-900 mb-2">${reel.title}</h2>
-                    <span class="inline-block bg-emerald-100 text-emerald-800 font-semibold px-3 py-1 rounded-full text-sm mb-4">Focus: ${reel.target}</span>
+                <div class="border-b border-slate-200 pb-6 mb-8 relative">
+                    <h2 class="text-3xl md:text-4xl font-extrabold font-heading text-slate-900 mb-3 pr-20">${reel.title}</h2>
+                    <span class="inline-flex items-center bg-slate-100 text-slate-700 font-bold px-3 py-1.5 rounded-md text-sm mb-6 border border-slate-200 shadow-sm">
+                        <span class="font-bold mr-1">Strategic Objective:</span> ${reel.target}
+                    </span>
                     
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
-                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-100">
-                            <h4 class="text-xs font-bold uppercase text-slate-500 mb-1">The Vibe</h4>
-                            <p class="text-sm text-slate-800 font-medium">${reel.vibe}</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-2">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase text-slate-400 mb-2 tracking-wider">Tone & Delivery</h4>
+                            <p class="text-sm text-slate-700 font-medium leading-relaxed">${reel.vibe}</p>
                         </div>
-                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-100">
-                            <h4 class="text-xs font-bold uppercase text-slate-500 mb-1">The Setup</h4>
-                            <p class="text-sm text-slate-800 font-medium">${reel.setup}</p>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase text-slate-400 mb-2 tracking-wider">Scene Setup</h4>
+                            <p class="text-sm text-slate-700 font-medium leading-relaxed">${reel.setup}</p>
                         </div>
                     </div>
                 </div>
                 
-                <h3 class="text-xl font-bold font-heading text-slate-800 mb-6">Script Timeline</h3>
-                <div class="script-timeline">
+                <h3 class="text-xl font-bold font-heading text-slate-800 mb-8 flex items-center">
+                    60-Second Execution Timeline
+                </h3>
+                <div class="script-timeline ml-2">
                     ${blocksHTML}
                 </div>
             </div>
